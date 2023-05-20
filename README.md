@@ -57,3 +57,9 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
 
 Local Pass: Zz%T#9Jpvi9M@g$
+
+# DB Dump:
+
+```bash
+docker exec -it -e DATABASE_PASSWORD=strapi_password postgres pg_dump -c --if-exists --exclude-table=strapi_administrator -h 127.0.0.1 -U strapi_user strapi > strapi.sql
+```
